@@ -9,8 +9,10 @@ class App extends Component {
 
   render() {
     return (
-      <h1>Hello World</h1>
-      <WordCounter targetWordCount={20} />
+      <div>
+        <h1>Hello World</h1>
+        <WordCounter targetWordCount={20} />
+      </div>
     )
   }
 }
