@@ -1,8 +1,8 @@
-const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -11,16 +11,16 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      template: "./index.html"
+      template: './index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css",
+      filename: '[name].css',
+      chunkFilename: '[id].css'
     }),
     new FaviconsWebpackPlugin(
       {
         // Your source logo
-        logo: "./assets/logo.png",
+        logo: './assets/logo.png',
         // The prefix for all image files (might be a folder or a name)
         prefix: 'icons-[hash]/',
         // Emit all stats of the generated icons
@@ -36,7 +36,7 @@ module.exports = {
         background: '#fff',
         // favicon app title (see https://github.com/haydenbleasel/favicons#usage)
         title: 'Webpack App',
-    
+
         // which icons should be generated (see https://github.com/haydenbleasel/favicons#usage)
         icons: {
           android: false,
@@ -76,7 +76,7 @@ module.exports = {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader",
+            loader: 'html-loader',
             options: {
               minimize: true
             }
@@ -85,10 +85,10 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"]
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
-        
+
         test: /\.(png|svg|jpg|gif)$/,
         use: ['file-loader']
       }
@@ -97,4 +97,4 @@ module.exports = {
   resolve: {
     extensions: ['.json', '.js', '.jsx', '.css']
   }
-};
+}

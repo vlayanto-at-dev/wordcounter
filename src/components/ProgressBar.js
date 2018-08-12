@@ -1,16 +1,16 @@
-import React from 'react';
+import React from 'react'
 
-export default function	ProgressBar({	completion })	{
+export default function	ProgressBar ({	completion })	{
   const	percentage	=	completion	*	100
 
   return (
-      <div className="mv2	flex flex-column">
-          <label htmlFor="progress"	className="mv2">
+    <div className='mv2	flex flex-column'>
+      <label htmlFor='progress'	className='mv2'>
               Progress
-          </label>
-          <progress	value={completion} id="progress" className="bn">
-              {percentage}%
-          </progress>
-      </div>
+      </label>
+      <progress	value={completion} id='progress' className='bn'>
+        {percentage}%
+      </progress>
+    </div>
   )
 }

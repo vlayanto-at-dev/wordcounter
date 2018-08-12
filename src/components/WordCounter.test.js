@@ -1,10 +1,10 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import WordCounter from './WordCounter';
-import countWords from '../helpers/countWords';
-import Counter from './Counter';
-import Editor from './Editor';
-import ProgressBar from './ProgressBar';
+import React from 'react'
+import { shallow } from 'enzyme'
+import WordCounter from './WordCounter'
+import countWords from '../helpers/countWords'
+import Counter from './Counter'
+import Editor from './Editor'
+import ProgressBar from './ProgressBar'
 
 describe('When I type some words', () => {
   const target = 10
